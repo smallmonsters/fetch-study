@@ -19,10 +19,10 @@
   const url2 = `${host}/lesson_1/person.json`
 
   const myRequest = new Request(url1, {method: 'GET'});
-  // 3、如何发送post请求
+  // 问题：2、如何发送post请求
   const myRequest1 = new Request(url1, {method: 'POST'});
 
-  // 1、当fetch第一个参数是Request时，第二个参数会覆盖Request的配置吗？--不会
+  // 问题：1、当fetch第一个参数是Request时，第二个参数会覆盖Request的配置吗？--不会
   fetch(url2,myRequest)
     .then((response) => {
       return response.clone().json();
