@@ -1,9 +1,11 @@
-## 第一次使用[fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API)
+## 第一次了解[fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API)
+
+* ##### 
 
 * ##### 如何使用[fetch]((https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch))
 
 * ##### fetch的使用场景
-   1、服务器因该支持
+   1、服务器因该支持CORS
 
 * ##### fetch和XHR的区别
 
@@ -49,11 +51,12 @@
 
     XHR
     ![image](https://github.com/smallmonsters/fetch-study/blob/master/static/2.png)
+    >注意：fetch不支持ie
 
     ###### 4、缺点对比
     fetch
     > 1. fetch只对网络错误报错，http状态码错误不报错
-    > 2. fetch不支持[abort](https://github.com/smallmonsters/fetch-study/blob/master/extension_of_knowledge/1.md)，无法终止
+    > 2. fetch不支持[abort](https://github.com/smallmonsters/fetch-study/blob/master/extension_of_knowledge/1.md)，无法终止。现有AbortController 和 AbortSignal可以实现fetch的终止
     > 3. fetch不支持超时控制，使用setTimeout和Promise.reject实现的超时控制不能阻止请求过程继续在后台运行，造成了流量的浪费
     > 4. fetch没有原生检测请求进度的方式，XHR可以
     > 5. 默认情况下fetch不发送cookie，除非手动配置
@@ -61,7 +64,7 @@
 
 * 发送一个简单的fetch
 
-[demo](https://github.com/smallmonsters/fetch-study/blob/master/lesson_1/answer.html)
+[demo](https://github.com/smallmonsters/fetch-study/blob/master/lesson_1/index.html)
 
 ##### 问题
 
@@ -69,4 +72,7 @@
 
 2、如何发送post请求
 
-[answer](https://github.com/smallmonsters/fetch-study/blob/master/lesson_1/index.html)
+[answer](https://github.com/smallmonsters/fetch-study/blob/master/lesson_1/answer.html)
+
+##### 总结
+工作中还是老老实实使用AJAX，除非你对fetch的特性非常了解，亦或者项目非常适合使用fetch
